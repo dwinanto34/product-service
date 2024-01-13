@@ -1,7 +1,9 @@
 package com.company.product.implementation.modelconverter;
 
+import com.company.product.model.dto.EbookProductDTO;
 import com.company.product.model.dto.RetailProductDTO;
 import com.company.product.model.inbound.kafka.RetailProductRequest;
+import com.company.product.model.inbound.rest.EbookProductRequest;
 import com.company.product.service.modelconverter.ProductModelConverterService;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +23,22 @@ public class ProductModelConverterServiceImpl implements ProductModelConverterSe
                 .sizeUnit(retailProductRequest.getSizeUnit())
                 .weight(retailProductRequest.getWeight())
                 .weightUnit(retailProductRequest.getWeightUnit())
+                .build();
+    }
+
+    @Override
+    public EbookProductDTO convert(EbookProductRequest ebookProductRequest) {
+        return EbookProductDTO.builder()
+                .name(ebookProductRequest.getEbookName())
+                .description(ebookProductRequest.getEbookDescription())
+                .rating(ebookProductRequest.getEbookRating())
+                .availability(ebookProductRequest.isEbookAvailability())
+                .price(ebookProductRequest.getEbookPrice())
+                .author(ebookProductRequest.getAuthor())
+                .genre(ebookProductRequest.getGenre())
+                .publishDate(ebookProductRequest.getPublishDate())
+                .language(ebookProductRequest.getLanguage())
+                .numberOfPages(ebookProductRequest.getNumberOfPages())
                 .build();
     }
 }
