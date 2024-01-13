@@ -15,6 +15,10 @@ This repository serves as a showcase for a product service, implementing best pr
 - [Implement an API for creating digital ebook products](https://github.com/dwinanto34/product-service/commit/3221e57886c6bd0df3206ef00ff92bbb0efae64b)
 - [Notification for low quantity alerts](https://github.com/dwinanto34/product-service/commit/03193cbbee45736c73830f8763d4f811308efaf5)
 
+## Database Setup
+
+To set up the necessary database tables, [execute this SQL script](https://github.com/dwinanto34/product-service/commit/06035487ae36ea34bea5df6daf464649d2d929c7)
+
 ## For adding retail products
 **Topic:** `retail_product_topic`
 
