@@ -40,7 +40,7 @@ To set up the necessary database tables, [execute this SQL script](https://githu
 ```
 
 ## For adding digital ebook products
-**Endpoint:** `localhost:8080/ebooks`
+**Endpoint:** `POST` `localhost:8080/ebooks`
 
 **Payload Sample:**
 ```json
